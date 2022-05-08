@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form>
+    <button formaction="/add">add</button>
+    <button formaction="/update">update</button>
+    <button formaction="/delete">delete</button>    
+</form>
+<ul>
+    {% for d, a in data.items() %}
+    <li>{{ d }} {{ a }}</li>
+    {% endfor %}    
+</ul>
+{% endblock %}
+
